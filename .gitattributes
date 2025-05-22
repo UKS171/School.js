@@ -1,2 +1,33 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+let schoolStudents = [
+  {
+    Name: "Kalsoom",
+    Hobby: "Nothing",
+    doesLikeCricket: false,
+  },
+  {
+    Name: "Saeed",
+    Hobby: "Reading",
+    doesLikeCricket: true,
+  },
+  {
+    Name: "Kalsoom Saeed",
+    Hobby: "Nothing",
+    doesLikeCricket: true,
+  },
+];
+schoolStudents.forEach(function (student) {
+  if (student.Name == "Kalsoom") {
+    console.log("I found Kalsoom!");
+  }
+});
+let filteredNames = schoolStudents.filter(function (student) {
+  return student.Name.includes("ls") || student.Name.includes("sf");
+});
+
+console.log("Filtered Students:", filteredNames);
+let schoolName = [];
+function addSchoolToList() {
+  schoolName.push("LGS");
+  console.log("Updated School List:", schoolName);
+}
+addSchoolToList();
